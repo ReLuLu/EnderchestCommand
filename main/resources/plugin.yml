@@ -1,0 +1,25 @@
+name: EnderchestCommand
+main: de.web.relulu.EnderchestCommand.EnderchestMain
+version: ${project.version}
+author: ReLuLu
+website: 
+e-mail: 
+commands:
+  enderchest:
+    description: Opens up the enderchest inventory.
+    usage: /enderchest, /enderchest [Playername]
+    aliases: [ec]
+permissions: 
+  enderchestcommand.own.*:
+    default: op
+    children:
+      enderchestcommand.own.see: true
+      enderchestcommand.own.use:
+        default: op
+    enderchestcommand.other.*:
+    default: op
+    children:
+      enderchestcommand.other.see:
+        default: op
+      enderchestcommand.other.use:
+        default: op
